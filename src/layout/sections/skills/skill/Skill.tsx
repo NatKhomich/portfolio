@@ -19,7 +19,7 @@ export const Skill = ({iconId, title}: Props) => {
 const StyledSkill = styled.div`
   width: 18%;
   margin: 10px;
-  border: 1px solid red;
+  border: 1px solid rgba(115, 0, 255, 0.77);
   text-align: center;
 `
 
