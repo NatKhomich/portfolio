@@ -1,22 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import {ProjectType} from '../../../../data/data';
 
-type Props = {
-    image: string
-    title: string
-    description: string
-    demo: string
-    github: string
-}
+// type Props = {
+//     image: string
+//     title: string
+//     description: string
+//     demo: string
+//     github: string
+//     technologies: string[]
+// }
 
-export const Project = ({image, title, description, demo, github}: Props) => {
+export const Project = ({image, title, description, demoUrl, githubUrl, technologies}: ProjectType) => {
     return (
         <StyledProject>
             <Image src={image}/>
             <Title>{title}</Title>
+            <Technologies>{technologies}</Technologies>
             <Description>{description}</Description>
-            <Link href={demo}>demo</Link>
-            <Link href={github}>github</Link>
+            <Link href={demoUrl}>demo</Link>
+            <Link href={githubUrl}>github</Link>
         </StyledProject>
     );
 };
@@ -40,6 +43,10 @@ const Description = styled.p`
 
 `
 const Link = styled.a`
+
+`
+
+const Technologies = styled.p`
 
 `
 

@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import {SectionTitle} from '../../../components/SectionTitle';
 import {FlexWrapper} from '../../../components/FlexWrapper';
 import {Project} from './project/Project';
-import taskManager from '../../../assets/images/proj-1.webp'
-import social from '../../../assets/images/proj-2.webp'
+import {projects} from '../../../data/data';
 
 
 export const Projects = () => {
@@ -13,19 +12,17 @@ export const Projects = () => {
             <SectionTitle>Projects</SectionTitle>
 
             <FlexWrapper direction={'column'} justify={'center'} align={'center'}>
-                <Project title={'Task Manager'}
-                         image={taskManager}
-                         description={'It is a list of tasks. You can combine tasks into groups, delete/add new ones, as well as change their names. There is a filter for sorting tasks by the degree of their completion. The project is in a development project.'}
-                         demo={''}
-                         github={''}
-                />
 
-                <Project title={'Social Network'}
-                         image={social}
-                         description={'It is a list of Social Network.'}
-                         demo={''}
-                         github={''}
-                />
+                {projects.map((p, i) => (
+                    <Project key={i}
+                             title={p.title}
+                             image={p.image}
+                             description={p.description}
+                             demoUrl={p.demoUrl}
+                             githubUrl={p.githubUrl}
+                             technologies={p.technologies}
+                    />
+                ))}
             </FlexWrapper>
         </StyledProjects>
     );
