@@ -1,27 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import {SectionTitle} from '../../../components/SectionTitle';
-import {FlexWrapper} from '../../../components/FlexWrapper';
+import {Button} from '../../../components/Button';
 
 export const Contact = () => {
     return (
         <StyledContact>
             <SectionTitle>Contact</SectionTitle>
-            <FlexWrapper direction='column'>
-                <Form>
+                <StyledForm>
                     <Field placeholder='Name'/>
                     <Field type='email' placeholder='Email'/>
-                    <Field placeholder='Message'/>
-                </Form>
+                    <Field placeholder='Message' as='textarea'/>
 
-                <Button> Send message </Button>
-            </FlexWrapper>
+                    <Button type='submit'> Send message </Button>
+                </StyledForm>
         </StyledContact>
     );
 };
 
 const StyledContact = styled.section`
-  min-height: 100vh;
+  min-height: 50vh;
   background-color: #d7e5d2;
 `
 
@@ -37,16 +35,12 @@ const Field = styled.input.attrs<FieldType>(({type, placeholder}) => ({
 `
 
 
-const Form = styled.form`
+const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+  gap: 10px;
 `
 
-const Button = styled.button`
-  width: 150px;
-  height: 50px;
-  margin: 0 auto;
-`

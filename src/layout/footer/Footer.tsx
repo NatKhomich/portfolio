@@ -9,36 +9,58 @@ export const Footer = () => {
         <StyledFooter>
             <SectionTitle>You can find me here:</SectionTitle>
 
-            <FlexWrapper justify='center'>
-                <Link href="">
-                    <Icon iconId="instagram"/>
-                </Link>
+            <FlexWrapper direction={'column'} align={'center'}>
+                <SocialList>
 
-                <Link href="">
-                    <Icon iconId="linkedin"/>
-                </Link>
+                    <SocialItem>
+                        <Link href="">
+                            <Icon width={'50px'} height={'50px'} viewBox={'0 0 50px 50px'} iconId="instagram"/>
+                        </Link>
+                    </SocialItem>
 
-                <Link href="">
-                    <Icon iconId="mail"/>
-                </Link>
+                    <SocialItem>
+                        <Link href="">
+                            <Icon width={'50px'} height={'50px'} viewBox={'0 0 50px 50px'} iconId="linkedin"/>
+                        </Link>
+                    </SocialItem>
+
+                    <SocialItem>
+                        <Link href="">
+                            <Icon  width={'50px'} height={'50px'} viewBox={'0 0 50px 50px'} iconId="mail"/>
+                        </Link>
+                    </SocialItem>
+
+                    <SocialItem>
+                        <Link href="">
+                            <Icon width={'50px'} height={'50px'} viewBox={'0 0 50px 50px'} iconId="github"/>
+                        </Link>
+                    </SocialItem>
+
+                </SocialList>
+
+                <Copyright> © 2023 Natalia Khomich, All Rights Reserved. </Copyright>
             </FlexWrapper>
-            <Info> © 2023 Natalia Khomich, All Rights Reserved. </Info>
         </StyledFooter>
     );
 };
 
 const StyledFooter = styled.footer`
-
   background-color: #fcdbcd;
 `
 
-const Link = styled.a`
+const SocialList = styled.ul`
   display: flex;
-  justify-content: center;
-  
+  gap: 30px
+`
+const SocialItem = styled.li`
+
 `
 
-const Info = styled.p`
-text-align: center;
+const Link = styled.a`
+
+`
+
+const Copyright = styled.small`
+
 `
 
