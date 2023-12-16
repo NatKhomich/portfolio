@@ -10,6 +10,13 @@ export const Main = () => {
                 <div>
                     <Name> Hello, I’m Natalia Khomich </Name>
                     <MainTitle> Front-end Developer </MainTitle>
+
+                    <Link href='#'>
+                        LinkedIn
+                    </Link>
+                    <Link href='#'>
+                        Github
+                    </Link>
                 </div>
                 <Photo src={myPhoto} alt={'photo'}/>
             </FlexWrapper>
@@ -33,5 +40,9 @@ const MainTitle = styled.h1`
 `
 
 const Name = styled.h2`
+
+`
+
+const Link = styled.a`
 
 `
