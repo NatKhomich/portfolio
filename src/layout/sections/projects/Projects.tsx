@@ -10,9 +10,7 @@ export const Projects = () => {
     return (
         <StyledProjects>
             <SectionTitle>Projects</SectionTitle>
-
             <FlexWrapper direction={'column'} justify={'center'} align={'center'}>
-
                 {projects.map((p, i) => (
                     <Project key={i}
                              title={p.title}
