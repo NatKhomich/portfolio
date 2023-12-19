@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 type Props = {
@@ -14,4 +13,5 @@ export const FlexWrapper = styled.div<Props>`
   justify-content: ${props => props.justify || 'flex-start'};
   align-items: ${props => props.align || 'stretch'};
   flex-wrap: ${props => props.wrap || 'no-wrap'};
+  height: 100%;
 `

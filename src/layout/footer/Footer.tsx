@@ -14,25 +14,19 @@ export const Footer = () => {
 
                     <SocialItem>
                         <Link href="">
-                            <Icon width={'50px'} height={'50px'} viewBox={'0 0 50px 50px'} iconId="instagram"/>
+                            <Icon iconId="instagram"/>
                         </Link>
                     </SocialItem>
 
                     <SocialItem>
                         <Link href="">
-                            <Icon width={'50px'} height={'50px'} viewBox={'0 0 50px 50px'} iconId="linkedin"/>
+                            <Icon iconId="linkedin"/>
                         </Link>
                     </SocialItem>
 
                     <SocialItem>
                         <Link href="">
-                            <Icon  width={'50px'} height={'50px'} viewBox={'0 0 50px 50px'} iconId="mail"/>
-                        </Link>
-                    </SocialItem>
-
-                    <SocialItem>
-                        <Link href="">
-                            <Icon width={'50px'} height={'50px'} viewBox={'0 0 50px 50px'} iconId="github"/>
+                            <Icon iconId="mail"/>
                         </Link>
                     </SocialItem>
 
