@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Menu} from '../../components/menu/Menu';
+import {Menu} from './menu/Menu';
 import {Container} from '../../components/Container';
 import {FlexWrapper} from '../../components/FlexWrapper';
 
 const items = [
 'Home', 'Skills', 'Projects', 'Contact'
 ]
-
 
 export const Header = () => {
     return (
@@ -22,5 +21,11 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-  background-color: #c0a8b4;
+  background-color: rgba(31, 31, 32, 0.9);
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
 `
