@@ -14,19 +14,19 @@ export const Footer = () => {
 
                     <SocialItem>
                         <Link href="">
-                            <Icon iconId="instagram"/>
+                            {/*<Icon iconId="instagram"/>*/}
                         </Link>
                     </SocialItem>
 
                     <SocialItem>
                         <Link href="">
-                            <Icon iconId="linkedin"/>
+                            {/*<Icon iconId="linkedin"/>*/}
                         </Link>
                     </SocialItem>
 
                     <SocialItem>
                         <Link href="">
-                            <Icon iconId="mail"/>
+                            {/*<Icon iconId="mail"/>*/}
                         </Link>
                     </SocialItem>
 

@@ -1,16 +1,18 @@
 import React from 'react';
 import {Icon} from '../../../../components/icon/Icon';
 import styled from 'styled-components';
+import {IconType} from 'react-icons';
 
 type Props = {
-    iconId: string
     title: string
+    icon: IconType | string
+    color: string
 }
 
-export const Skill = ({iconId, title}: Props) => {
+export const Skill = ({title, icon, color}: Props) => {
     return (
         <StyledSkill>
-            <Icon iconId={iconId}/>
+            <Icon icon={icon} color={color} size={'80px'}/>
             <SkillTitle>{title}</SkillTitle>
         </StyledSkill>
     );
@@ -19,7 +21,6 @@ export const Skill = ({iconId, title}: Props) => {
 const StyledSkill = styled.div`
   width: 120px;
   margin: 15px;
-  border: 1px solid rgba(115, 0, 255, 0.77);
   text-align: center;
 `
 

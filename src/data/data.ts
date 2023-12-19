@@ -2,9 +2,31 @@ import taskManager from '../assets/images/proj-1.webp'
 import social from '../assets/images/social.webp'
 import productPage from '../assets/images/productPage.webp'
 
+import {IconType} from 'react-icons';
+import { FaReact } from "react-icons/fa";
+import { SiRedux } from "react-icons/si";
+import { TbBrandTypescript } from "react-icons/tb";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaHtml5 } from "react-icons/fa";
+import { FaCss3Alt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaGitAlt } from "react-icons/fa";
+import { SiStyledcomponents } from "react-icons/si";
+import { SiAxios } from "react-icons/si";
+import { SiMui } from "react-icons/si";
+import { SiStorybook } from "react-icons/si";
+import { SiReactrouter } from "react-icons/si";
+import { FaFigma } from "react-icons/fa";
+import { SiCssmodules } from "react-icons/si";
+import { SiJest } from "react-icons/si";
+import { FaSass } from "react-icons/fa";
+import { IoLogoFirebase } from "react-icons/io5";
+
+
 export type SkillType = {
     title: string
-    iconId: string
+    icon: IconType | string
+    color: string
 }
 
 export type ProjectType = {
@@ -19,41 +41,95 @@ export type ProjectType = {
 export const skills: SkillType[] = [
     {
         title: 'React',
-        iconId: 'react'
+        color: 'rgba(22,120,248,0.77)',
+        icon: FaReact
     },
     {
         title: 'Redux Toolkit',
-        iconId: 'redux'
+        color: 'rgba(131,36,250,0.77)',
+        icon: SiRedux
     },
     {
         title: 'TypeScript',
-        iconId: 'ts'
+        color: 'rgb(17,144,246)',
+        icon: TbBrandTypescript
     },
     {
         title: 'JavaScript',
-        iconId: 'js'
+        color: '#ffc435',
+        icon: IoLogoJavascript
     },
     {
         title: 'HTML',
-        iconId: 'html'
+        color: 'rgba(255,98,31,0.77)',
+        icon: FaHtml5
     },
     {
         title: 'CSS',
-        iconId: 'css'
+        color: 'rgba(36,111,250,0.77)',
+        icon: FaCss3Alt
     },
     {
         title: 'Github',
-        iconId: 'github'
+        color: 'rgba(255,255,255,0.77)',
+        icon: FaGithub
     },
     {
         title: 'Git',
-        iconId: 'git'
+        color: 'rgb(255,106,0)',
+        icon: FaGitAlt
+    },
+    {
+        title: 'Axios',
+        color: 'rgba(144,10,255,0.77)',
+        icon: SiAxios
+    },
+    {
+        title: 'React Router',
+        color: 'rgba(34,208,248,0.77)',
+        icon: SiReactrouter
     },
     {
         title: 'Styled Components',
-        iconId: 'styledComponents'
+        color: 'rgb(246,221,94)',
+        icon: SiStyledcomponents
     },
-]
+    {
+        title: 'Material UI',
+        color: 'rgba(75,171,250,0.77)',
+        icon: SiMui
+    },
+    {
+        title: 'SASS',
+        color: 'rgba(250,94,225,0.93)',
+        icon: FaSass
+    },
+    {
+        title: 'CSS Modules',
+        color: 'rgb(255,255,255)',
+        icon: SiCssmodules
+    },
+    {
+        title: 'Storybook',
+        color: 'rgba(255,99,187,0.77)',
+        icon: SiStorybook
+    },
+    {
+        title: 'Jest',
+        color: 'rgba(252,94,1,0.93)',
+        icon: SiJest
+    },
+    {
+        title: 'Figma',
+        color: 'rgba(197,30,243,0.77)',
+        icon: FaFigma
+    },
+    {
+        title: 'Firebase',
+        color: 'rgb(252,189,60)',
+        icon: IoLogoFirebase
+    },
+    ]
 
 export const projects: ProjectType[] = [
     {

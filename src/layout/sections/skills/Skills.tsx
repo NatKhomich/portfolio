@@ -12,11 +12,13 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>Skills</SectionTitle>
                 <FlexWrapper wrap='wrap' justify='space-between'>
-
                     {skills.map((s, i) => (
-                        <Skill key={i} iconId={s.iconId} title={s.title}/>
+                        <Skill key={i}
+                               title={s.title}
+                               icon={s.icon}
+                               color={s.color}
+                        />
                     ))}
-
                 </FlexWrapper>
             </Container>
         </StyledSkills>
