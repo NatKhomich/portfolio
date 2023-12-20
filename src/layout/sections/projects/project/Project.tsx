@@ -41,8 +41,8 @@ const StyledProject = styled.div`
 `
 
 const Image = styled.img`
-  width: 30%;
-  min-height: 230px;
+  width: 40%;
+  min-height: 300px;
   object-fit: cover;
   border-radius: 7px;
 `
@@ -61,7 +61,7 @@ const Description = styled.p`
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 
 `
 const Link = styled.a`
@@ -80,13 +80,14 @@ const Technologies = styled.p`
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  margin: 15px 0 8px;
+  margin: 20px 0 20px;
 `
 
 const TechnologiesItem = styled.span`
   margin-right: 10px;
   color: ${theme.colors.accent};
   white-space: nowrap;
+  font-size: 18px;
 `
 
 

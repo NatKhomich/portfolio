@@ -25,11 +25,9 @@ export const Main = () => {
                             Github
                         </Link>
                     </div>
-
                     <PhotoWrapper>
                         <Photo src={myPhoto} alt={'photo'}/>
                     </PhotoWrapper>
-
                 </FlexWrapper>
             </Container>
         </StyledMain>
@@ -128,11 +126,23 @@ position: relative;
     content: '';
     width: 359px;
     height: 470px;
-    border: 5px solid ${theme.colors.accent};
+    border: 5px solid ${theme.colors.add};
     
     position: absolute;
     top: -16px;
     left: -4px;
+    z-index: 2;
+  }
+
+  &::after {
+    content: '';
+    width: 359px;
+    height: 470px;
+    border: 5px solid ${theme.colors.accent};
+
+    position: absolute;
+    top: 5px;
+    left: 15px;
     z-index: -1;
   }
 `
