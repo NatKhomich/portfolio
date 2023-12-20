@@ -36,9 +36,7 @@ const MenuList = styled.ul`
 const Link = styled.a`
   color: transparent;
   font-size: 20px;
-  font-family: Raleway, sans-serif;
-  font-weight: 500;
-  line-height: 28px;
+  font-weight: 700;
   text-align: center;
   
 `

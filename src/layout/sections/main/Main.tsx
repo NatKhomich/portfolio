@@ -91,7 +91,7 @@ const Link = styled.a<LinkProps>`
   height: 43px;
   color: black;
   font-size: 20px;
-  font-family: Roboto sans-serif;
+  font-family: Roboto, sans-serif;
   font-weight: 500;
   border-radius: 7px;
   text-align: center;

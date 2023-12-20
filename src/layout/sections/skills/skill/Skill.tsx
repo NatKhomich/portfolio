@@ -1,5 +1,5 @@
 import React from 'react';
-import {Icon} from '../../../../components/icon/Icon';
+import {Icon} from '../../../../components/Icon';
 import styled from 'styled-components';
 import {IconType} from 'react-icons';
 
@@ -19,7 +19,7 @@ export const Skill = ({title, icon, color}: Props) => {
 };
 
 const StyledSkill = styled.div`
-  width: 120px;
+  width: 100px;
   margin: 15px;
   text-align: center;
 `
