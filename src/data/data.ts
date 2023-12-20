@@ -1,4 +1,4 @@
-import taskManager from '../assets/images/proj-1.webp'
+import taskManager from '../assets/images/taskManager.webp'
 import social from '../assets/images/social.webp'
 import productPage from '../assets/images/productPage.webp'
 

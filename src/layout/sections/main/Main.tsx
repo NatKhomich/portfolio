@@ -1,5 +1,5 @@
 import React from 'react';
-import myPhoto from '../../../assets/images/myPhoto.webp'
+import myPhoto from '../../../assets/images/avatar.webp'
 import styled, {css} from 'styled-components';
 import {FlexWrapper} from '../../../components/FlexWrapper';
 import {Container} from '../../../components/Container';
@@ -39,8 +39,6 @@ export const Main = () => {
 
 const StyledMain = styled.section`
   min-height: 100vh;
-  background-color: #d5eff5;
-
   display: flex;
 `
 
@@ -65,7 +63,7 @@ const Name = styled.h2`
       content: '';
       display: inline-block;
       width: 100%;
-      height: 20px;
+      height: 17px;
       background-color: ${theme.colors.accent};
       position: absolute;
       bottom: 0;
@@ -79,6 +77,7 @@ const MainTitle = styled.h1`
   font-family: Roboto, sans-serif;
   font-weight: 700;
   margin: 15px 0 32px 0;
+  letter-spacing: 2px;
 `
 
 type LinkProps = {
@@ -96,7 +95,7 @@ const Link = styled.a<LinkProps>`
   border-radius: 7px;
   text-align: center;
 
-  padding: 8px 0;
+  padding: 10px 0;
 
   background-color: ${props => props.background || 'white'};
 
@@ -117,7 +116,7 @@ const Link = styled.a<LinkProps>`
 
 const Photo = styled.img`
   width: 350px;
-  height: 430px;
+  height: 450px;
   object-fit: cover;
 `
 
@@ -127,13 +126,13 @@ position: relative;
   
   &::before {
     content: '';
-    width: 360px;
+    width: 359px;
     height: 470px;
     border: 5px solid ${theme.colors.accent};
     
     position: absolute;
-    top: -24px;
-    left: 24px;
+    top: -16px;
+    left: -4px;
     z-index: -1;
   }
 `
