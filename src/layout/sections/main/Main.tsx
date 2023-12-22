@@ -9,7 +9,7 @@ export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={'center'} justify={'space-between'} wrap={'wrap'}>
+                <FlexWrapper align={'center'} justify={'space-evenly'} wrap={'wrap'}>
                     <div>
                         <SmallText>Hi There</SmallText>
                         <Name> I am <span> Natalia Khomich </span> </Name>
@@ -45,17 +45,22 @@ const SmallText = styled.small`
   font-family: Nunito, sans-serif;
   font-weight: 400;
   line-height: 36px;
-  word-wrap: break-word
+  word-wrap: break-word;
+
+  @media ${theme.media.mobile} {
+    font-size: 20px;
+  }
 `
 
 const Name = styled.h2`
-  font-size: 50px;
   font-family: Roboto, sans-serif;
   font-weight: 700;
+  font-size: 45px;
   
   span {
     position: relative;
     z-index: 0;
+    white-space: nowrap;
     
     &::before {
       content: '';
@@ -66,7 +71,15 @@ const Name = styled.h2`
       position: absolute;
       bottom: 0;
       z-index: -1;
+
+      @media ${theme.media.mobile} {
+        height: 13px;
+      }
     }
+  }
+  
+  @media ${theme.media.mobile} {
+    font-size: 35px;
   }
 `
 
@@ -74,8 +87,12 @@ const MainTitle = styled.h1`
   font-size: 30px;
   font-family: Roboto, sans-serif;
   font-weight: 700;
-  margin: 15px 0 32px 0;
+  margin: 15px 0 20px 0;
   letter-spacing: 2px;
+
+  @media ${theme.media.mobile} {
+    font-size: 25px;
+  }
 `
 
 type LinkProps = {
@@ -94,7 +111,6 @@ const Link = styled.a<LinkProps>`
   text-align: center;
 
   padding: 10px 0;
-
   background-color: ${props => props.background || 'white'};
 
   ${props => props.background === 'accent' && css`
@@ -116,33 +132,54 @@ const Photo = styled.img`
   width: 350px;
   height: 450px;
   object-fit: cover;
+  
+  @media ${theme.media.mobile} {
+    width: 300px;
+    height: 380px;
+  }
 `
 
 const PhotoWrapper = styled.div`
-position: relative;
+  position: relative;
   z-index: 1;
-  
+  margin-right: 20px;
+
   &::before {
     content: '';
     width: 362px;
-    height: 470px;
+    height: 472px;
     border: 6px solid ${theme.colors.add};
-    
+
     position: absolute;
-    top: -15px;
+    top: -16px;
     left: -6px;
     z-index: -1;
+
+    @media ${theme.media.mobile} {
+      width: 312px;
+      height: 402px;
+    }
   }
 
   &::after {
     content: '';
     width: 360px;
-    height: 470px;
+    height: 472px;
     border: 5px solid ${theme.colors.accent};
 
     position: absolute;
     top: 6px;
     left: 16px;
     z-index: -1;
+
+    @media ${theme.media.mobile} {
+      width: 312px;
+      height: 402px;
+    }
+  }
+
+  @media ${theme.media.add} {
+   margin-top: 30px;
+    margin-left: 10px;
   }
 `
