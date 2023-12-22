@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import {SectionTitle} from '../../components/SectionTitle';
 import {FlexWrapper} from '../../components/FlexWrapper';
 import {Icon} from '../../components/Icon';
 import {theme} from '../../styles/Theme';
@@ -13,7 +12,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <SectionTitle>You can find me here:</SectionTitle>
+                <Title>You can find me here:</Title>
                 <FlexWrapper direction={'column'} align={'center'}>
                     <SocialList>
                         <SocialItem>
@@ -37,7 +36,6 @@ export const Footer = () => {
                     <Copyright> © 2023 Natalia Khomich, All Rights Reserved. </Copyright>
                 </FlexWrapper>
             </Container>
-
         </StyledFooter>
     );
 };
@@ -48,9 +46,17 @@ const StyledFooter = styled.footer`
 
 `
 
+const Title = styled.h3`
+  text-align: center;
+  font-size: 28px;
+  font-family: Playfair Display, sans-serif;
+  font-weight: 700;
+  margin-bottom: 55px;
+`
+
 const SocialList = styled.ul`
   display: flex;
-  gap: 30px
+  gap: 40px
 `
 const SocialItem = styled.li`
 
@@ -65,6 +71,6 @@ const Link = styled.a`
 
 const Copyright = styled.small`
   font-size: 16px;
-  margin-top: 40px;
+  margin-top: 35px;
 `
 

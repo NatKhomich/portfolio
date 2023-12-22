@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {Menu} from './menu/Menu';
 import {Container} from '../../components/Container';
 import {FlexWrapper} from '../../components/FlexWrapper';
+import {MobileMenu} from './mobileMenu/MobileMenu';
 
 const items = [
 'Home', 'Skills', 'Projects', 'Contact'
@@ -14,6 +15,7 @@ export const Header = () => {
             <Container>
                 <FlexWrapper justify='flex-end' align='center'>
                     <Menu items={items}/>
+                    <MobileMenu items={items}/>
                 </FlexWrapper>
             </Container>
         </StyledHeader>

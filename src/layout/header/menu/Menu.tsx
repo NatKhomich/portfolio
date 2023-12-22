@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {theme} from '../../../styles/Theme';
+import {MobileMenu} from '../mobileMenu/MobileMenu';
 
 
 export const Menu = (props: { items: string[] }) => {
@@ -19,7 +20,9 @@ export const Menu = (props: { items: string[] }) => {
 };
 
 const StyledMenu = styled.nav`
-  
+  @media ${theme.media.mobile} {
+    display: none;
+  }
 `
 
 const MenuList = styled.ul`

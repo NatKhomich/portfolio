@@ -120,29 +120,29 @@ const Photo = styled.img`
 
 const PhotoWrapper = styled.div`
 position: relative;
-  z-index: 0;
+  z-index: 1;
   
   &::before {
     content: '';
-    width: 359px;
+    width: 362px;
     height: 470px;
-    border: 5px solid ${theme.colors.add};
+    border: 6px solid ${theme.colors.add};
     
     position: absolute;
-    top: -16px;
-    left: -4px;
-    z-index: 2;
+    top: -15px;
+    left: -6px;
+    z-index: -1;
   }
 
   &::after {
     content: '';
-    width: 359px;
+    width: 360px;
     height: 470px;
     border: 5px solid ${theme.colors.accent};
 
     position: absolute;
-    top: 5px;
-    left: 15px;
+    top: 6px;
+    left: 16px;
     z-index: -1;
   }
 `

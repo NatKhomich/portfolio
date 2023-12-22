@@ -7,7 +7,6 @@ export const SectionTitle = styled.h2`
   font-size: 28px;
   font-family: Playfair Display, sans-serif;
   font-weight: 700;
-  word-wrap: break-word;
   margin-bottom: 75px;
 
   position: relative;
