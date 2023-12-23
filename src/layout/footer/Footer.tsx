@@ -44,14 +44,21 @@ const StyledFooter = styled.footer`
   padding: 80px 0 20px;
   background-color: ${theme.colors.primaryBg};
 
+  @media ${theme.media.mobile} {
+    padding: 50px 0 20px;
+  }
 `
 
 const Title = styled.h3`
   text-align: center;
-  font-size: 28px;
+  font-size: 26px;
   font-family: Playfair Display, sans-serif;
   font-weight: 700;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 35px;
+  }
 `
 
 const SocialList = styled.ul`
@@ -70,7 +77,8 @@ const Link = styled.a`
 `
 
 const Copyright = styled.small`
-  font-size: 16px;
-  margin-top: 35px;
+  font-size: 15px;
+  margin-top: 25px;
+  opacity: 0.5;
 `
 

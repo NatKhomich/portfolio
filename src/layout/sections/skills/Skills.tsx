@@ -11,7 +11,7 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <SectionTitle>Skills</SectionTitle>
-                <FlexWrapper wrap='wrap' justify='space-between'>
+                <FlexWrapper wrap='wrap' justify='space-evenly'>
                     {skills.map((s, i) => (
                         <Skill key={i}
                                title={s.title}

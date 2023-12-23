@@ -22,10 +22,10 @@ export const Project = ({image, title, description, demoUrl, githubUrl, technolo
                     </Technologies>
                     <Description>{description}</Description>
                     <Link href={demoUrl} target="_blank">
-                        <Icon icon={MdOutlineOpenInNew} size={'23px'} color={theme.colors.font}/>
+                        <Icon icon={MdOutlineOpenInNew} size={'25px'} color={theme.colors.font}/>
                     </Link>
                     <Link href={githubUrl} target="_blank">
-                        <Icon icon={FaGithub} size={'23px'} color={theme.colors.font}/>
+                        <Icon icon={FaGithub} size={'25px'} color={theme.colors.font}/>
                     </Link>
                 </ProjectWrapper>
             </FlexWrapper>
@@ -38,6 +38,12 @@ const StyledProject = styled.div`
   background-color: ${theme.colors.add};
   width: 100%;
   margin-bottom: 15px;
+
+  ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+      flex-wrap: wrap;
+    }
+  }
 `
 
 const Image = styled.img`
@@ -45,10 +51,19 @@ const Image = styled.img`
   min-height: 300px;
   object-fit: cover;
   border-radius: 7px;
+  
+  @media ${theme.media.tablet} {
+    width: 100%;
+    max-height: 300px;
+  }
 `
 
 const ProjectWrapper = styled.div`
   margin: 10px 0 0 20px;
+
+  @media ${theme.media.tablet} {
+   margin: 10px 0;
+  }
 `
 
 const ProjectName = styled.h4`
@@ -63,6 +78,9 @@ const Description = styled.p`
   line-height: 27px;
   margin-bottom: 15px;
 
+  @media ${theme.media.mobile} {
+    font-size: 16px;
+  }
 `
 const Link = styled.a`
   & + a {
@@ -88,6 +106,10 @@ const TechnologiesItem = styled.span`
   color: ${theme.colors.accent};
   white-space: nowrap;
   font-size: 18px;
+
+  @media ${theme.media.mobile} {
+    font-size: 16px;
+  }
 `
 
 
