@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon} from '../../../../components/Icon';
-import styled from 'styled-components';
 import {IconType} from 'react-icons';
+import {S} from '../Skills_Styles'
 
 type Props = {
     title: string
@@ -11,19 +11,10 @@ type Props = {
 
 export const Skill = ({title, icon, color}: Props) => {
     return (
-        <StyledSkill>
+        <S.Skill>
             <Icon icon={icon} color={color} size={'80px'}/>
-            <SkillTitle>{title}</SkillTitle>
-        </StyledSkill>
+            <S.SkillTitle>{title}</S.SkillTitle>
+        </S.Skill>
     );
 };
 
-const StyledSkill = styled.div`
-  width: 100px;
-  margin: 15px;
-  text-align: center;
-`
-
-const SkillTitle = styled.h3`
-
-`

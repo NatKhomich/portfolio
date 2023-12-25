@@ -2,12 +2,11 @@ import styled, {css} from 'styled-components';
 import {theme} from '../../../styles/Theme';
 
 //Menu
-const ListItem = styled.li`
-`
+const ListItem = styled.li``
 
 const Link = styled.a`
   color: ${theme.colors.font};
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
   text-align: center;
 
@@ -26,8 +25,7 @@ const DesktopMenu = styled.nav`
 `
 
 //Mobile
-const MobileMenu = styled.div`
-`
+const MobileMenu = styled.div``
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
   position: fixed;

@@ -1,188 +1,35 @@
 import React from 'react';
 import myPhoto from '../../../assets/images/avatar.webp'
-import styled, {css} from 'styled-components';
 import {FlexWrapper} from '../../../components/FlexWrapper';
 import {Container} from '../../../components/Container';
-import {theme} from '../../../styles/Theme';
+import {S} from './Main_Styles'
 
 export const Main = () => {
     return (
-        <StyledMain>
+        <S.Main>
             <Container>
                 <FlexWrapper align={'center'} justify={'space-evenly'} wrap={'wrap'}>
                     <div>
-                        <SmallText>Hi There</SmallText>
-                        <Name> I am <span> Natalia Khomich </span> </Name>
-                        <MainTitle> Front-end Developer </MainTitle>
+                        <S.SmallText>Hi There</S.SmallText>
+                        <S.Name> I am <span> Natalia Khomich </span> </S.Name>
+                        <S.MainTitle> Front-end Developer </S.MainTitle>
 
-                        <Link href="https://www.linkedin.com/in/nat-khomich/" target="_blank"
+                        <S.Link href="https://www.linkedin.com/in/nat-khomich/" target="_blank"
                               background="accent">
                             LinkedIn
-                        </Link>
+                        </S.Link>
 
-                        <Link href="https://github.com/NatKhomich" target="_blank"
+                        <S.Link href="https://github.com/NatKhomich" target="_blank"
                               background="font">
                             Github
-                        </Link>
+                        </S.Link>
                     </div>
-                    <PhotoWrapper>
-                        <Photo src={myPhoto} alt={'photo'}/>
-                    </PhotoWrapper>
+                    <S.PhotoWrapper>
+                        <S.Photo src={myPhoto} alt={'photo'}/>
+                    </S.PhotoWrapper>
                 </FlexWrapper>
             </Container>
-        </StyledMain>
+        </S.Main>
     );
 };
 
-const StyledMain = styled.section`
-  min-height: 100vh;
-  display: flex;
-`
-
-const SmallText = styled.small`
-  font-size: 24px;
-  font-family: Nunito, sans-serif;
-  font-weight: 400;
-  line-height: 36px;
-  word-wrap: break-word;
-
-  @media ${theme.media.mobile} {
-    font-size: 20px;
-  }
-`
-
-const Name = styled.p`
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  font-size: 45px;
-  
-  span {
-    position: relative;
-    z-index: 0;
-    white-space: nowrap;
-    
-    &::before {
-      content: '';
-      display: inline-block;
-      width: 100%;
-      height: 17px;
-      background-color: ${theme.colors.accent};
-      position: absolute;
-      bottom: 0;
-      z-index: -1;
-
-      @media ${theme.media.mobile} {
-        height: 13px;
-      }
-    }
-  }
-  
-  @media ${theme.media.mobile} {
-    font-size: 35px;
-  }
-`
-
-const MainTitle = styled.h1`
-  font-size: 30px;
-  font-family: Roboto, sans-serif;
-  font-weight: 700;
-  margin: 15px 0 20px 0;
-  letter-spacing: 2px;
-
-  @media ${theme.media.mobile} {
-    font-size: 25px;
-  }
-`
-
-type LinkProps = {
-    background: 'accent' | 'font'
-}
-
-const Link = styled.a<LinkProps>`
-  display: inline-block;
-  width: 115px;
-  height: 43px;
-  color: black;
-  font-size: 20px;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  border-radius: 7px;
-  text-align: center;
-
-  padding: 10px 0;
-  background-color: ${props => props.background || 'white'};
-
-  ${props => props.background === 'accent' && css`
-    background-color: ${theme.colors.accent};
-  `}
-  ${props => props.background === 'font' && css`
-    background-color: ${theme.colors.font};
-  `}
-  & + a {
-    margin-left: 12px;
-  }
-
-  &:hover {
-    background-color: rgba(243, 227, 199, 0.7);
-  }
-`
-
-const Photo = styled.img`
-  width: 350px;
-  height: 450px;
-  object-fit: cover;
-  
-  @media ${theme.media.mobile} {
-    width: 300px;
-    height: 380px;
-  }
-`
-
-const PhotoWrapper = styled.div`
-  position: relative;
-  z-index: 1;
-  margin-right: 20px;
-
-  &::before {
-    content: '';
-    width: 362px;
-    height: 472px;
-    border: 6px solid ${theme.colors.add};
-
-    position: absolute;
-    top: -16px;
-    left: -6px;
-    z-index: -1;
-
-    @media ${theme.media.mobile} {
-      width: 312px;
-      height: 402px;
-    }
-  }
-
-  &::after {
-    content: '';
-    width: 360px;
-    height: 472px;
-    border: 5px solid ${theme.colors.accent};
-
-    position: absolute;
-    top: 6px;
-    left: 16px;
-    z-index: -1;
-
-    @media ${theme.media.mobile} {
-      width: 312px;
-      height: 402px;
-    }
-  }
-
-  @media ${theme.media.add} {
-   margin-top: 30px;
-    margin-left: 10px;
-  }
-
-  @media ${theme.media.small} {
-display: none;
-  }
-`

@@ -1,14 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 import {SectionTitle} from '../../../components/SectionTitle';
 import {Project} from './project/Project';
 import {projects} from '../../../data/data';
 import {Container} from '../../../components/Container';
+import {S} from './Projects_Styles'
 
 
 export const Projects = () => {
     return (
-        <StyledProjects>
+        <S.Projects>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                     {projects.map((p, i) => (
@@ -22,10 +22,7 @@ export const Projects = () => {
                         />
                     ))}
             </Container>
-        </StyledProjects>
+        </S.Projects>
     );
 };
 
-const StyledProjects = styled.section`
-    
-`

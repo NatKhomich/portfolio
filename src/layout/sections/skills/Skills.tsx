@@ -1,14 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 import {FlexWrapper} from '../../../components/FlexWrapper';
 import {SectionTitle} from '../../../components/SectionTitle';
 import {Skill} from './skill/Skill';
 import {skills} from '../../../data/data';
 import {Container} from '../../../components/Container';
+import {S} from './Skills_Styles'
 
 export const Skills = () => {
     return (
-        <StyledSkills>
+        <S.Skills>
             <Container>
                 <SectionTitle>Skills</SectionTitle>
                 <FlexWrapper wrap='wrap' justify='space-evenly'>
@@ -21,11 +21,8 @@ export const Skills = () => {
                     ))}
                 </FlexWrapper>
             </Container>
-        </StyledSkills>
+        </S.Skills>
     );
 };
 
 
-const StyledSkills = styled.section`
-    
-`
