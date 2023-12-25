@@ -1,42 +1,32 @@
-import React, {useState} from 'react';
 import styled, {css} from 'styled-components';
 import {theme} from '../../../styles/Theme';
 
+//Menu
+const ListItem = styled.li`
+`
 
-export const MobileMenu = (props: { items: string[] }) => {
+const Link = styled.a`
+  color: ${theme.colors.font};
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
 
-    const [isOpen, setIsOpen] = useState(false)
-
-    const isOpenHandler = () => {
-        setIsOpen(!isOpen)
-    }
-
-    return (
-        <StyledMenu>
-            <BurgerButton onClick={isOpenHandler} isOpen={isOpen}>
-                <span></span>
-            </BurgerButton >
-            <MenuPopup onClick={isOpenHandler} isOpen={isOpen}>
-                <ul>
-                    {props.items.map((i, index) => (
-                        <ListItem key={index}>
-                            <Link href="#">
-                                {i}
-                            </Link>
-                        </ListItem>
-                    ))}
-                </ul>
-            </MenuPopup>
-        </StyledMenu>
-    );
-};
-
-const StyledMenu = styled.div`
-  display: none;
-  
-  @media ${theme.media.mobile} {
-    display: block;
+  &:hover {
+    color: ${theme.colors.accent};
   }
+`
+
+//Desktop
+const DesktopMenu = styled.nav`
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 45px
+  }
+`
+
+//Mobile
+const MobileMenu = styled.div`
 `
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
@@ -116,17 +106,11 @@ const MenuPopup = styled.nav<{isOpen: boolean}>`
   }
 `
 
-const Link = styled.a`
-  color: ${theme.colors.font};
-  font-size: 22px;
-  font-weight: 700;
-  text-align: center;
-  
-  &:hover {
-    color: ${theme.colors.accent};
-  }
-`
-
-const ListItem = styled.li`
-  position: relative;
-`
+export const S = {
+    ListItem,
+    Link,
+    DesktopMenu,
+    MobileMenu,
+    BurgerButton,
+    MenuPopup
+}

@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import {ProjectType} from '../../../../data/data';
+import {ProjectProps} from '../../../../data/data';
 import {theme} from '../../../../styles/Theme';
 import {MdOutlineOpenInNew} from 'react-icons/md';
 import {Icon} from '../../../../components/Icon';
 import {FaGithub} from 'react-icons/fa';
 
 
-export const Project = ({image, title, description, demoUrl, githubUrl, technologies}: ProjectType) => {
+export const Project = ({image, title, description, demoUrl, githubUrl, technologies}: ProjectProps) => {
     return (
         <StyledProject>
-                <Image src={image}/>
+                <Image src={image} alt='project-photo'/>
                 <ProjectWrapper>
                     <ProjectName>{title}</ProjectName>
                     <Technologies>
@@ -19,10 +19,10 @@ export const Project = ({image, title, description, demoUrl, githubUrl, technolo
                         })}
                     </Technologies>
                     <Description>{description}</Description>
-                    <Link href={demoUrl} target="_blank">
+                    <Link href={demoUrl} target="_blank" aria-label='demo-project'>
                         <Icon icon={MdOutlineOpenInNew} size={'25px'} color={theme.colors.font}/>
                     </Link>
-                    <Link href={githubUrl} target="_blank">
+                    <Link href={githubUrl} target="_blank" aria-label='github-project'>
                         <Icon icon={FaGithub} size={'25px'} color={theme.colors.font}/>
                     </Link>
                 </ProjectWrapper>

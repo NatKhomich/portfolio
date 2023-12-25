@@ -1,6 +1,7 @@
 import taskManager from '../assets/images/taskManager.webp'
 import social from '../assets/images/social.webp'
 import productPage from '../assets/images/productPage.webp'
+import {theme} from '../styles/Theme';
 
 import {IconType} from 'react-icons';
 import {FaReact} from 'react-icons/fa';
@@ -21,15 +22,16 @@ import {SiCssmodules} from 'react-icons/si';
 import {SiJest} from 'react-icons/si';
 import {FaSass} from 'react-icons/fa';
 import {IoLogoFirebase} from 'react-icons/io5';
+import {FaInstagram, FaTelegram} from 'react-icons/fa';
+import {SlSocialVkontakte} from 'react-icons/sl';
 
-
-export type SkillType = {
+type SkillProps = {
     title: string
     icon: IconType | string
     color: string
 }
 
-export type ProjectType = {
+export type ProjectProps = {
     title: string
     demoUrl: string
     githubUrl: string
@@ -38,7 +40,15 @@ export type ProjectType = {
     technologies: string[]
 }
 
-export const skills: SkillType[] = [
+type FooterLink = {
+    icon: IconType | string
+    title: string
+    color: string
+    link: string
+    ariaLabel: string
+}
+
+export const skills: SkillProps[] = [
     {
         title: 'React',
         color: 'rgba(22,120,248,0.77)',
@@ -131,7 +141,7 @@ export const skills: SkillType[] = [
     },
 ]
 
-export const projects: ProjectType[] = [
+export const projects: ProjectProps[] = [
     {
         title: 'Task Manager',
         demoUrl: 'https://natkhomich.github.io/task-manager/',
@@ -172,5 +182,29 @@ Product page is a registration and authentication platform that allows users to 
             'React', 'Redux Toolkit', 'Firebase', 'TypeScript', 'CSS Modules',
             'Material UI', 'React Router Dom 6', 'Formik', 'Storybook'
         ],
+    },
+]
+
+export const footerLink: FooterLink[] = [
+    {
+        title: 'Telegram',
+        color: theme.colors.font,
+        icon: FaTelegram,
+        link: 'https://t.me/Natalia_Khomich',
+        ariaLabel: 'telegram-link'
+    },
+    {
+        title: 'Instagram',
+        color: theme.colors.font,
+        icon: FaInstagram,
+        link: 'https://www.instagram.com/nat_khomich/',
+        ariaLabel: 'instagram-link'
+    },
+    {
+        title: 'Vk',
+        color: theme.colors.font,
+        icon: SlSocialVkontakte,
+        link: 'https://vk.com/natalia_khomich',
+        ariaLabel: 'vkontakte-link'
     },
 ]

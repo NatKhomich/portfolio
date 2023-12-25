@@ -4,9 +4,7 @@ import {FlexWrapper} from '../../components/FlexWrapper';
 import {Icon} from '../../components/Icon';
 import {theme} from '../../styles/Theme';
 import {Container} from '../../components/Container';
-
-import {FaInstagram, FaTelegram} from 'react-icons/fa';
-import {SlSocialVkontakte} from 'react-icons/sl';
+import {footerLink} from '../../data/data';
 
 export const Footer = () => {
     return (
@@ -15,23 +13,13 @@ export const Footer = () => {
                 <Title>You can find me here:</Title>
                 <FlexWrapper direction={'column'} align={'center'}>
                     <SocialList>
-                        <SocialItem>
-                            <Link href="https://t.me/Natalia_Khomich" target="_blank">
-                                <Icon icon={FaTelegram} size={'35px'} color={theme.colors.font}/>
-                            </Link>
-                        </SocialItem>
-
-                        <SocialItem>
-                            <Link href="https://www.instagram.com/nat_khomich/" target="_blank">
-                                <Icon icon={FaInstagram} size={'35px'} color={theme.colors.font}/>
-                            </Link>
-                        </SocialItem>
-
-                        <SocialItem>
-                            <Link href="https://vk.com/natalia_khomich" target="_blank">
-                                <Icon icon={SlSocialVkontakte} size={'35px'} color={theme.colors.font}/>
-                            </Link>
-                        </SocialItem>
+                        {footerLink.map((link, index) => (
+                                <li key={index}>
+                                    <Link href={link.link} target="_blank" aria-label={link.ariaLabel}>
+                                        <Icon icon={link.icon} size={'35px'} color={link.color}/>
+                                    </Link>
+                                </li>
+                        ))}
                     </SocialList>
                     <Copyright> © 2023 Natalia Khomich, All Rights Reserved. </Copyright>
                 </FlexWrapper>
@@ -64,9 +52,6 @@ const Title = styled.h2`
 const SocialList = styled.ul`
   display: flex;
   gap: 40px
-`
-const SocialItem = styled.li`
-
 `
 
 const Link = styled.a`

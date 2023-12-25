@@ -1,22 +1,28 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
-import {Menu} from './menu/Menu';
 import {Container} from '../../components/Container';
-import {FlexWrapper} from '../../components/FlexWrapper';
-import {MobileMenu} from './mobileMenu/MobileMenu';
+import {DesktopMenu} from './headerMenu/desktopMenu/DesktopMenu';
+import {MobileMenu} from './headerMenu/mobileMenu/MobileMenu';
 
 const items = [
-'Home', 'Skills', 'Projects', 'Contact'
+    'Home', 'Skills', 'Projects', 'Contact'
 ]
 
 export const Header = () => {
+
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 576;
+
+    useEffect(() => {
+        window.addEventListener('resize', () => setWidth(window.innerWidth));
+    }, []);
+
     return (
         <StyledHeader>
             <Container>
-                <FlexWrapper justify='flex-end' align='center'>
-                    <Menu items={items}/>
-                    <MobileMenu items={items}/>
-                </FlexWrapper>
+                {width < breakpoint
+                    ? <MobileMenu items={items}/>
+                    : <DesktopMenu items={items}/>}
             </Container>
         </StyledHeader>
     );
