@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import {theme} from '../../../styles/Theme';
-import {MobileMenu} from '../mobileMenu/MobileMenu';
 
 
 export const Menu = (props: { items: string[] }) => {
     return (
         <StyledMenu>
             <MenuList>
-                {props.items.map((i, index) => (
+                {props.items.map((item, index) => (
                     <ListItem key={index}>
-                        <Link href="#">{i}
+                        <Link href="#">
+                            {item}
                         </Link>
                     </ListItem>
                 ))}
@@ -30,6 +30,10 @@ const MenuList = styled.ul`
   gap: 45px
 `
 
+const ListItem = styled.li`
+  position: relative;
+`
+
 const Link = styled.a`
   color: ${theme.colors.font};
   font-size: 22px;
@@ -39,8 +43,4 @@ const Link = styled.a`
   &:hover {
     color: ${theme.colors.accent};
   }
-`
-
-const ListItem = styled.li`
-  position: relative;
 `

@@ -31,7 +31,6 @@ export const Main = () => {
                 </FlexWrapper>
             </Container>
         </StyledMain>
-
     );
 };
 
@@ -52,7 +51,7 @@ const SmallText = styled.small`
   }
 `
 
-const Name = styled.h2`
+const Name = styled.p`
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 45px;
@@ -181,5 +180,9 @@ const PhotoWrapper = styled.div`
   @media ${theme.media.add} {
    margin-top: 30px;
     margin-left: 10px;
+  }
+
+  @media ${theme.media.small} {
+display: none;
   }
 `

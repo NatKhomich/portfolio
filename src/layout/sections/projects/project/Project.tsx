@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import {ProjectType} from '../../../../data/data';
-import {FlexWrapper} from '../../../../components/FlexWrapper';
 import {theme} from '../../../../styles/Theme';
 import {MdOutlineOpenInNew} from 'react-icons/md';
 import {Icon} from '../../../../components/Icon';
@@ -11,7 +10,6 @@ import {FaGithub} from 'react-icons/fa';
 export const Project = ({image, title, description, demoUrl, githubUrl, technologies}: ProjectType) => {
     return (
         <StyledProject>
-            <FlexWrapper>
                 <Image src={image}/>
                 <ProjectWrapper>
                     <ProjectName>{title}</ProjectName>
@@ -28,22 +26,21 @@ export const Project = ({image, title, description, demoUrl, githubUrl, technolo
                         <Icon icon={FaGithub} size={'25px'} color={theme.colors.font}/>
                     </Link>
                 </ProjectWrapper>
-            </FlexWrapper>
+
         </StyledProject>
     );
 };
 
 const StyledProject = styled.div`
+  display: flex;
   padding: 15px;
   background-color: ${theme.colors.add};
   width: 100%;
   margin-bottom: 15px;
-
-  ${FlexWrapper} {
+  
     @media ${theme.media.tablet} {
       flex-wrap: wrap;
     }
-  }
 `
 
 const Image = styled.img`
@@ -66,7 +63,7 @@ const ProjectWrapper = styled.div`
   }
 `
 
-const ProjectName = styled.h4`
+const ProjectName = styled.h3`
   font-size: 20px;
   font-weight: 700;
 `

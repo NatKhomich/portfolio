@@ -49,7 +49,7 @@ const StyledFooter = styled.footer`
   }
 `
 
-const Title = styled.h3`
+const Title = styled.h2`
   text-align: center;
   font-size: 26px;
   font-family: Playfair Display, sans-serif;

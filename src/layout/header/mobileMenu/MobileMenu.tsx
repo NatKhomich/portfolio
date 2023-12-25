@@ -31,7 +31,7 @@ export const MobileMenu = (props: { items: string[] }) => {
     );
 };
 
-const StyledMenu = styled.nav`
+const StyledMenu = styled.div`
   display: none;
   
   @media ${theme.media.mobile} {
@@ -91,7 +91,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
   }
 `
 
-const MenuPopup = styled.div<{isOpen: boolean}>`
+const MenuPopup = styled.nav<{isOpen: boolean}>`
   position: fixed;
   background-color: rgba(31, 31, 32, 0.9);
   top: 0;
