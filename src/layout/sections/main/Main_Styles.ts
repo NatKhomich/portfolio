@@ -154,6 +154,15 @@ const PhotoWrapper = styled.div`
   }
 `
 
+const Typewriter = styled.p`
+  font-size: 26px;
+  font-family: Roboto, sans-serif;
+  font-weight: 700;
+  margin: 45px 0 20px 0;
+  letter-spacing: 2px;
+  color: ${theme.colors.accent}
+`
+
 export const S = {
     Main,
     SmallText,
@@ -161,5 +170,6 @@ export const S = {
     MainTitle,
     Link,
     Photo,
-    PhotoWrapper
+    PhotoWrapper,
+    Typewriter
 }
