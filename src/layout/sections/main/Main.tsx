@@ -6,6 +6,7 @@ import {S} from './Main_Styles'
 import Typewriter from 'typewriter-effect';
 
 export const Main = () => {
+
     return (
         <S.Main>
             <Container>
@@ -36,7 +37,6 @@ export const Main = () => {
                                 }}
                             />
                         </S.Typewriter>
-
                     </div>
                     <S.PhotoWrapper>
                         <S.Photo src={myPhoto} alt={'photo'}/>

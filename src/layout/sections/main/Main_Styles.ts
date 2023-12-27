@@ -154,7 +154,7 @@ const PhotoWrapper = styled.div`
   }
 `
 
-const Typewriter = styled.p`
+const Typewriter = styled.div`
   font-size: 26px;
   font-family: Roboto, sans-serif;
   font-weight: 700;

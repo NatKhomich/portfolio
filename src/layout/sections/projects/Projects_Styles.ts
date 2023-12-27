@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import {theme} from '../../../styles/Theme';
 
-const Projects = styled.section``
+const Projects = styled.section`
+position: relative;
+`
 
 const Project = styled.div`
   display: flex;
