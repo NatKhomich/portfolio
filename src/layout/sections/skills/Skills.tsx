@@ -9,20 +9,20 @@ import {Fade} from 'react-awesome-reveal';
 
 export const Skills = () => {
     return (
-        <S.Skills id='skills'>
+        <S.Skills id="skills">
             <Fade cascade damping={1} delay={300} triggerOnce>
-            <Container>
-                <SectionTitle>Skills</SectionTitle>
-                <FlexWrapper wrap='wrap' justify='space-evenly'>
-                    {skills.map((s, i) => (
-                        <Skill key={i}
-                               title={s.title}
-                               icon={s.icon}
-                               color={s.color}
-                        />
-                    ))}
-                </FlexWrapper>
-            </Container>
+                <Container>
+                    <SectionTitle>Skills</SectionTitle>
+                    <FlexWrapper wrap="wrap" justify="space-evenly">
+                        {skills.map((s, i) => (
+                            <Skill key={i}
+                                   title={s.title}
+                                   icon={s.icon}
+                                   color={s.color}
+                            />
+                        ))}
+                    </FlexWrapper>
+                </Container>
             </Fade>
         </S.Skills>
     );
