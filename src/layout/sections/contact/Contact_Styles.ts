@@ -43,8 +43,16 @@ const Field = styled.input`
   }
 `
 
+const Error = styled.div`
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 0.60px;
+  color: #f83434;
+`
+
 export const S = {
     Contact,
     Form,
-    Field
+    Field,
+    Error
 }
