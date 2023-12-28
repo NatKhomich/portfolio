@@ -30,7 +30,7 @@ const SocialList = styled.ul`
 const Link = styled.a`
   &:hover svg {
     fill: ${theme.colors.accent};
-    transform: scale(1.05);
+    transform: ${theme.animations.transform};
   }
 `
 

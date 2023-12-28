@@ -13,5 +13,6 @@ export const Button = styled.button`
   &:hover {
     fill: ${theme.colors.accent};
     transform: scale(1.05);
+    transition: ${theme.animations.transition};
   }
 `

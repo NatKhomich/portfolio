@@ -12,5 +12,9 @@ export const theme = {
         add: 'screen and (max-width: 985px)',
         mobile: 'screen and (max-width: 576px)',
         small: 'screen and (max-width: 355px)',
+    },
+    animations: {
+        transition: '.2s ease-in-out',
+        transform: 'scale(1.05)'
     }
 }

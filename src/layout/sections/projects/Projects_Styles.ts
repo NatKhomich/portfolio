@@ -48,10 +48,6 @@ const Description = styled.p`
   font-weight: 400;
   line-height: 27px;
   margin-bottom: 15px;
-
-  @media ${theme.media.mobile} {
-    font-size: 16px;
-  }
 `
 
 const Link = styled.a`

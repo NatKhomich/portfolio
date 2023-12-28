@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import exp from 'constants';
 
 const Header = styled.header`
   background-color: rgba(31, 31, 32, 0.9);

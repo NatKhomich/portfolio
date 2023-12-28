@@ -5,10 +5,12 @@ import {Skill} from './skill/Skill';
 import {skills} from '../../../data/data';
 import {Container} from '../../../components/Container';
 import {S} from './Skills_Styles'
+import {Fade} from 'react-awesome-reveal';
 
 export const Skills = () => {
     return (
-        <S.Skills>
+        <S.Skills id='skills'>
+            <Fade cascade damping={1} delay={300} triggerOnce>
             <Container>
                 <SectionTitle>Skills</SectionTitle>
                 <FlexWrapper wrap='wrap' justify='space-evenly'>
@@ -21,6 +23,7 @@ export const Skills = () => {
                     ))}
                 </FlexWrapper>
             </Container>
+            </Fade>
         </S.Skills>
     );
 };

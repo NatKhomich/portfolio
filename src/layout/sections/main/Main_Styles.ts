@@ -91,6 +91,8 @@ const Link = styled.a<LinkProps>`
 
   &:hover {
     background-color: rgba(243, 227, 199, 0.7);
+    transform: ${theme.animations.transform};
+    transition: ${theme.animations.transition};
   }
 `
 
@@ -158,7 +160,7 @@ const Typewriter = styled.div`
   font-size: 26px;
   font-family: Roboto, sans-serif;
   font-weight: 700;
-  margin: 45px 0 20px 0;
+  margin: 55px 0 20px 0;
   letter-spacing: 2px;
   color: ${theme.colors.accent}
 `

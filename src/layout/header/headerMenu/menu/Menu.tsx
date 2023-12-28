@@ -1,14 +1,22 @@
 import React from 'react';
 import {S} from '../HeaderMenu_Styles'
 
-export const Menu = (props: {items: string[]}) => {
+const items = [
+    'home', 'skills', 'projects', 'contact'
+]
+
+export const Menu = () => {
     return (
             <ul>
-                {props.items.map((item, index) => (
+                {items.map((item, index) => (
                     <S.ListItem key={index}>
-                        <S.Link href="#">
+                        <S.NavLink to={item}
+                                   smooth
+                                   activeClass="active"
+                                   spy
+                        >
                             {item}
-                        </S.Link>
+                        </S.NavLink>
                     </S.ListItem>
                 ))}
             </ul>

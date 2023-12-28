@@ -2,10 +2,10 @@ import React from 'react';
 import {Menu} from '../menu/Menu';
 import {S} from '../HeaderMenu_Styles'
 
-export const DesktopMenu = (props: { items: string[] }) => {
+export const DesktopMenu = () => {
     return (
         <S.DesktopMenu>
-                <Menu items={props.items} />
+                <Menu />
         </S.DesktopMenu>
     );
 };

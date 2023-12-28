@@ -4,10 +4,6 @@ import {DesktopMenu} from './headerMenu/desktopMenu/DesktopMenu';
 import {MobileMenu} from './headerMenu/mobileMenu/MobileMenu';
 import {S} from './Header_Styles'
 
-const items = [
-    'Home', 'Skills', 'Projects', 'Contact'
-]
-
 export const Header = () => {
 
     const [width, setWidth] = React.useState(window.innerWidth);
@@ -21,8 +17,8 @@ export const Header = () => {
         <S.Header>
             <Container>
                 {width < breakpoint
-                    ? <MobileMenu items={items}/>
-                    : <DesktopMenu items={items}/>}
+                    ? <MobileMenu/>
+                    : <DesktopMenu/>}
             </Container>
         </S.Header>
     );

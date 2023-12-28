@@ -1,17 +1,23 @@
 import styled, {css} from 'styled-components';
 import {theme} from '../../../styles/Theme';
+import {Link} from 'react-scroll';
 
 //Menu
 const ListItem = styled.li``
 
-const Link = styled.a`
+const NavLink = styled(Link)`
   color: ${theme.colors.font};
   font-size: 20px;
   font-weight: 700;
   text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: ${theme.animations.transition};
 
-  &:hover {
+  &:hover, &.active {
     color: ${theme.colors.accent};
+    transition: ${theme.animations.transition};
+    
   }
 `
 
@@ -87,12 +93,14 @@ const MenuPopup = styled.nav<{isOpen: boolean}>`
   right: 0;
   bottom: 0;
   z-index: 9999;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: .8s ease-in-out;
   
   ${props => props.isOpen && css<{isOpen: boolean}>`
-  display: flex;
-    justify-content: center;
-    align-items: center;
+    transform: translateY(0);
   `}
 
   ul {
@@ -106,7 +114,7 @@ const MenuPopup = styled.nav<{isOpen: boolean}>`
 
 export const S = {
     ListItem,
-    Link,
+    NavLink,
     DesktopMenu,
     MobileMenu,
     BurgerButton,

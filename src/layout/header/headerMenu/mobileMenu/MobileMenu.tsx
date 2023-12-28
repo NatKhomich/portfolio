@@ -3,7 +3,7 @@ import {Menu} from '../menu/Menu';
 import {S} from '../HeaderMenu_Styles'
 
 
-export const MobileMenu = (props: { items: string[] }) => {
+export const MobileMenu = () => {
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -17,7 +17,7 @@ export const MobileMenu = (props: { items: string[] }) => {
                 <span></span>
             </S.BurgerButton >
             <S.MenuPopup onClick={isOpenHandler} isOpen={isOpen}>
-                <Menu items={props.items}/>
+                <Menu />
             </S.MenuPopup>
         </S.MobileMenu>
     );

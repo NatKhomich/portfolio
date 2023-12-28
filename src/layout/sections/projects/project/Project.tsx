@@ -20,10 +20,10 @@ export const Project = ({image, title, description, demoUrl, githubUrl, technolo
                     </S.Technologies>
                     <S.Description>{description}</S.Description>
                     <S.Link href={demoUrl} target="_blank" aria-label='demo-project'>
-                        <Icon icon={MdOutlineOpenInNew} size={'25px'} color={theme.colors.font}/>
+                        <Icon icon={MdOutlineOpenInNew} size={'30px'} color={theme.colors.font}/>
                     </S.Link>
                     <S.Link href={githubUrl} target="_blank" aria-label='github-project'>
-                        <Icon icon={FaGithub} size={'25px'} color={theme.colors.font}/>
+                        <Icon icon={FaGithub} size={'30px'} color={theme.colors.font}/>
                     </S.Link>
                 </S.ProjectWrapper>
         </S.Project>
