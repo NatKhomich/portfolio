@@ -33,7 +33,6 @@ const ImageWrapper = styled.div`
     width: 100%;
     min-width: 100%;
   }
-    
 `
 
 const Image = styled.img`

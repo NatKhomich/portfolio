@@ -156,15 +156,13 @@ const PhotoWrapper = styled.div`
   }
 `
 
-const Typewriter = styled.div`
+const TextEffect = styled.div`
   font-size: 26px;
   font-family: Roboto, sans-serif;
   font-weight: 700;
   margin: 55px 0 20px 0;
   letter-spacing: 2px;
   color: ${theme.colors.accent};
-  max-width: 100%;
-  word-break: break-all;
 `
 
 export const S = {
@@ -175,5 +173,5 @@ export const S = {
     Link,
     Photo,
     PhotoWrapper,
-    Typewriter
+    TextEffect
 }

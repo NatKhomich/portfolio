@@ -3,7 +3,7 @@ import myPhoto from '../../../assets/images/avatar.webp'
 import {FlexWrapper} from '../../../components/FlexWrapper';
 import {Container} from '../../../components/Container';
 import {S} from './Main_Styles'
-import Typewriter from 'typewriter-effect';
+import ReactTypingEffect from 'react-typing-effect';
 
 export const Main = () => {
 
@@ -28,15 +28,14 @@ export const Main = () => {
                             Github
                         </S.Link>
 
-                        <S.Typewriter>
-                            <Typewriter
-                                options={{
-                                    strings: ['I front-end developer', 'I love coding'],
-                                    autoStart: true,
-                                    loop: true,
-                                }}
-                            />
-                        </S.Typewriter>
+                        <S.TextEffect>
+                        <ReactTypingEffect
+                            speed={100}
+                            typingDelay={1000}
+                            eraseDelay={1000}
+                            text={['I front-end developer', 'I love coding']}
+                        />
+                        </S.TextEffect>
                     </div>
                     <S.PhotoWrapper>
                         <S.Photo src={myPhoto} alt={'photo'}/>
