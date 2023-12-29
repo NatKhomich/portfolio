@@ -19,7 +19,7 @@ const Project = styled.div`
 
 const ImageWrapper = styled.div`
   width: 40%;
-  min-width: 400px;
+  min-width: 380px;
   min-height: 300px;
   object-fit: cover;
   border-radius: 7px;
@@ -70,7 +70,7 @@ const Description = styled.p`
 `
 
 const Link = styled.a`
-  width: 100%;
+  
   & + a {
     margin-left: 10px;
   }

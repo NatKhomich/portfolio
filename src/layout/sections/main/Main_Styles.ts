@@ -162,7 +162,9 @@ const Typewriter = styled.div`
   font-weight: 700;
   margin: 55px 0 20px 0;
   letter-spacing: 2px;
-  color: ${theme.colors.accent}
+  color: ${theme.colors.accent};
+  max-width: 100%;
+  word-break: break-all;
 `
 
 export const S = {
