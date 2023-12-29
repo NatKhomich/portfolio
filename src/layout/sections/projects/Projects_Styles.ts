@@ -17,15 +17,34 @@ const Project = styled.div`
     }
 `
 
-const Image = styled.img`
+const ImageWrapper = styled.div`
   width: 40%;
+  min-width: 400px;
+  min-height: 300px;
+  object-fit: cover;
+  border-radius: 7px;
+  
+  &:hover {
+    filter: blur(1px);
+    transition: ${theme.animations.transition};
+  }
+
+  @media ${theme.media.tablet} {
+    width: 100%;
+    min-width: 100%;
+  }
+    
+`
+
+const Image = styled.img`
+  width: 100%;
   min-height: 300px;
   object-fit: cover;
   border-radius: 7px;
   
   @media ${theme.media.tablet} {
     width: 100%;
-    max-height: 300px;
+    max-height: 350px;
   }
 `
 
@@ -51,6 +70,7 @@ const Description = styled.p`
 `
 
 const Link = styled.a`
+  width: 100%;
   & + a {
     margin-left: 10px;
   }
@@ -90,5 +110,6 @@ export const S = {
     Description,
     Link,
     Technologies,
-    TechnologiesItem
+    TechnologiesItem,
+    ImageWrapper
 }

@@ -176,7 +176,7 @@ This website project is a possible representation of a social network like VKONT
         githubUrl: 'https://github.com/NatKhomich/product-page-test-task',
         image: productPage,
         description: `
-Product page is a registration and authentication platform that allows users to sign up using email and password or Google services. The app also provides authorization through these methods. Users can access product listings, add items to their cart, and place orders, with the order details saved in JSON format. (test task) The project is in a development project.
+The app allows users to log in (including through Google services) and access the list of products. There is also the option to add items to the cart and place orders, with order details being saved in JSON format. (Test task) The project is currently in development.
         `,
         technologies: [
             'React', 'Redux Toolkit', 'Firebase', 'TypeScript', 'CSS Modules',
