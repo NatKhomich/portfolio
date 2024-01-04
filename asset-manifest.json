@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.57f2a1fc.js",
+    "main.js": "/portfolio/static/js/main.1bd60570.js",
     "static/js/945.f3d8f995.chunk.js": "/portfolio/static/js/945.f3d8f995.chunk.js",
     "static/media/avatar.webp": "/portfolio/static/media/avatar.b9bdd5776bd8e9c55ec2.webp",
+    "static/media/product.webp": "/portfolio/static/media/product.22d1c5124d49e705d424.webp",
     "static/media/social.webp": "/portfolio/static/media/social.2655866d60e69c1f3a33.webp",
-    "static/media/productPage.webp": "/portfolio/static/media/productPage.8f4ead720d3317ad7694.webp",
-    "static/media/taskManager.webp": "/portfolio/static/media/taskManager.f1d87a070a1d1773dd65.webp",
+    "static/media/task-manager.webp": "/portfolio/static/media/task-manager.9c9ecd81001845a83f43.webp",
     "index.html": "/portfolio/index.html"
   },
   "entrypoints": [
-    "static/js/main.57f2a1fc.js"
+    "static/js/main.1bd60570.js"
   ]
 }
