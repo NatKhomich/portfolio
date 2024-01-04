@@ -1,6 +1,6 @@
-import taskManager from '../assets/images/taskManager.webp'
+import taskManager from '../assets/images/task-manager.webp'
 import social from '../assets/images/social.webp'
-import productPage from '../assets/images/productPage.webp'
+import productPage from '../assets/images/product.webp'
 import {theme} from '../styles/Theme';
 
 import {IconType} from 'react-icons';
