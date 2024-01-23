@@ -3,7 +3,28 @@ import {theme} from '../../../styles/Theme';
 import {Link} from 'react-scroll';
 
 //Menu
-const ListItem = styled.li``
+const ListItem = styled.li`
+  position: relative;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    background-color: ${theme.colors.accent};
+    height: 0;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+
+  &:hover, &.active {
+    &::before {
+      transition: ${theme.animations.transition};
+      height: 3px;
+    }
+  }
+`
 
 const NavLink = styled(Link)`
   color: ${theme.colors.font};
@@ -12,13 +33,6 @@ const NavLink = styled(Link)`
   text-align: center;
   text-transform: capitalize;
   cursor: pointer;
-  transition: ${theme.animations.transition};
-
-  &:hover, &.active {
-    color: ${theme.colors.accent};
-    transition: ${theme.animations.transition};
-    
-  }
 `
 
 //Desktop
@@ -26,7 +40,7 @@ const DesktopMenu = styled.nav`
   ul {
     display: flex;
     justify-content: flex-end;
-    gap: 45px
+    gap: 55px
   }
 `
 

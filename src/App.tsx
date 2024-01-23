@@ -8,7 +8,7 @@ import {Particle} from './components/Particle';
 
 function App() {
     return (
-        <div className="App">
+        <>
             <Particle/>
             <Header/>
             <Main/>
@@ -16,7 +16,7 @@ function App() {
             <Projects/>
             <Contact/>
             <Footer/>
-        </div>
+        </>
     );
 }
 

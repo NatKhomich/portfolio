@@ -1,6 +1,7 @@
 import taskManager from '../assets/images/task-manager.webp'
 import social from '../assets/images/social.webp'
 import productPage from '../assets/images/product.webp'
+import nftArt from '../assets/images/nft-art.webp'
 import {theme} from '../styles/Theme';
 
 import {IconType} from 'react-icons';
@@ -181,6 +182,19 @@ The app allows users to log in (including through Google services) and access th
         technologies: [
             'React', 'Redux Toolkit', 'Firebase', 'TypeScript', 'CSS Modules',
             'Material UI', 'React Router Dom 6', 'Formik', 'Storybook'
+        ],
+    },
+
+    {
+        title: 'NFT-creative-art',
+        demoUrl: 'https://natkhomich.github.io/NFT-creative-art/',
+        githubUrl: 'https://github.com/NatKhomich/NFT-creative-art',
+        image: nftArt,
+        description: `
+The site is made according to the layout from Figma. With adaptive.
+        `,
+        technologies: [
+            'React', 'TypeScript', 'Styled components', 'React-awesome-reveal', 'React-scroll'
         ],
     },
 ]

@@ -22,7 +22,7 @@ export const Footer = () => {
                                 </li>
                             ))}
                         </S.SocialList>
-                        <S.Copyright> © 2023 Natalia Khomich, All Rights Reserved. </S.Copyright>
+                        <S.Copyright> © 2024 Natalia Khomich, All Rights Reserved. </S.Copyright>
                     </FlexWrapper>
                 </Container>
             </Fade>
