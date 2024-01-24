@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.1bd60570.js",
+    "main.js": "/portfolio/static/js/main.3d3ce23c.js",
     "static/js/945.f3d8f995.chunk.js": "/portfolio/static/js/945.f3d8f995.chunk.js",
+    "static/media/nft-art.webp": "/portfolio/static/media/nft-art.9e5e4a9820c46a992ff3.webp",
     "static/media/avatar.webp": "/portfolio/static/media/avatar.b9bdd5776bd8e9c55ec2.webp",
-    "static/media/product.webp": "/portfolio/static/media/product.22d1c5124d49e705d424.webp",
+    "static/media/product.webp": "/portfolio/static/media/product.076ef82d0113288c0d88.webp",
     "static/media/social.webp": "/portfolio/static/media/social.2655866d60e69c1f3a33.webp",
     "static/media/task-manager.webp": "/portfolio/static/media/task-manager.9c9ecd81001845a83f43.webp",
     "index.html": "/portfolio/index.html"
   },
   "entrypoints": [
-    "static/js/main.1bd60570.js"
+    "static/js/main.3d3ce23c.js"
   ]
 }
