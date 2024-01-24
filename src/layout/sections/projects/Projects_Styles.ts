@@ -25,7 +25,7 @@ const ImageWrapper = styled.div`
   border-radius: 7px;
   
   &:hover {
-    filter: blur(1px);
+    filter: blur(0.5px);
     transition: ${theme.animations.transition};
   }
 
@@ -110,5 +110,5 @@ export const S = {
     Link,
     Technologies,
     TechnologiesItem,
-    ImageWrapper
+    ImageWrapper,
 }

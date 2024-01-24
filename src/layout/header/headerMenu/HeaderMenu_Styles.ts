@@ -5,6 +5,15 @@ import {Link} from 'react-scroll';
 //Menu
 const ListItem = styled.li`
   position: relative;
+`
+
+const NavLink = styled(Link)`
+  color: ${theme.colors.font};
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
 
   &::before {
     content: '';
@@ -24,15 +33,6 @@ const ListItem = styled.li`
       height: 3px;
     }
   }
-`
-
-const NavLink = styled(Link)`
-  color: ${theme.colors.font};
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
-  text-transform: capitalize;
-  cursor: pointer;
 `
 
 //Desktop
