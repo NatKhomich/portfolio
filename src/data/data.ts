@@ -158,9 +158,9 @@ export const projects: ProjectProps[] = [
     },
 
     {
-        title: 'Social Network',
-        demoUrl: 'https://natkhomich.github.io/social-network/',
-        githubUrl: 'https://github.com/NatKhomich/social-network',
+        title: 'Social Community',
+        demoUrl: 'https://natkhomich.github.io/social-community',
+        githubUrl: 'https://github.com/NatKhomich/social-community',
         image: social,
         description: `
 This website project is a possible representation of a social network like VKONTAKTE or Facebook.
@@ -172,7 +172,7 @@ This website project is a possible representation of a social network like VKONT
     },
 
     {
-        title: 'Product Page',
+        title: 'Handiwork Page',
         demoUrl: 'https://product-page-test-task.web.app/',
         githubUrl: 'https://github.com/NatKhomich/product-page-test-task',
         image: productPage,
@@ -186,7 +186,7 @@ The app allows users to log in (including through Google services) and access th
     },
 
     {
-        title: 'NFT-creative-art',
+        title: 'NFT Creative Art',
         demoUrl: 'https://natkhomich.github.io/NFT-creative-art/',
         githubUrl: 'https://github.com/NatKhomich/NFT-creative-art',
         image: nftArt,
