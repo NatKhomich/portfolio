@@ -26,6 +26,9 @@ import {FaSass} from 'react-icons/fa';
 import {IoLogoFirebase} from 'react-icons/io5';
 import {FaInstagram, FaTelegram} from 'react-icons/fa';
 import {SlSocialVkontakte} from 'react-icons/sl';
+import { SiRadixui } from "react-icons/si";
+import { SiReacthookform } from "react-icons/si";
+import { GoGear } from "react-icons/go";
 
 type SkillProps = {
     title: string
@@ -82,6 +85,21 @@ export const skills: SkillProps[] = [
         icon: FaCss3Alt
     },
     {
+        title: 'Storybook',
+        color: 'rgba(255,99,187,0.77)',
+        icon: SiStorybook
+    },
+    {
+        title: 'Radix UI',
+        color: 'rgba(0,0,0,0.77)',
+        icon: SiRadixui
+    },
+    {
+        title: 'React Hook Form',
+        color: '#ec5990',
+        icon: SiReacthookform
+    },
+    {
         title: 'Github',
         color: 'rgba(255,255,255,0.77)',
         icon: FaGithub
@@ -107,14 +125,14 @@ export const skills: SkillProps[] = [
         icon: SiStyledcomponents
     },
     {
-        title: 'Material UI',
-        color: 'rgba(75,171,250,0.77)',
-        icon: SiMui
-    },
-    {
         title: 'SASS',
         color: 'rgba(250,94,225,0.93)',
         icon: FaSass
+    },
+    {
+        title: 'Material UI',
+        color: 'rgba(75,171,250,0.77)',
+        icon: SiMui
     },
     {
         title: 'CSS Modules',
@@ -122,9 +140,9 @@ export const skills: SkillProps[] = [
         icon: SiCssmodules
     },
     {
-        title: 'Storybook',
-        color: 'rgba(255,99,187,0.77)',
-        icon: SiStorybook
+        title: 'Rest API',
+        color: 'rgb(49,159,190)',
+        icon: GoGear
     },
     {
         title: 'Jest',
