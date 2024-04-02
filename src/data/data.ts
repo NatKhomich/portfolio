@@ -2,6 +2,7 @@ import taskManager from '../assets/images/task-manager.webp'
 import social from '../assets/images/social.webp'
 import productPage from '../assets/images/product.webp'
 import nftArt from '../assets/images/nft-art.webp'
+import smartCards from '../assets/images/smartCards.webp'
 import {theme} from '../styles/Theme';
 
 import {IconType} from 'react-icons';
@@ -144,6 +145,20 @@ export const skills: SkillProps[] = [
 
 export const projects: ProjectProps[] = [
     {
+        title: 'Smart Cards',
+        demoUrl: 'https://smart-cards-app.vercel.app/',
+        githubUrl: 'https://github.com/talismanchik/SmartCards',
+        image: smartCards,
+        description: `
+It is interactive and customizable platform for learning through flashcards. Users can easily create, organize, and study flashcards on various subjects, enhancing their learning experience and knowledge retention.
+        `,
+        technologies: [
+            'React', 'Redux Toolkit', 'RTK Query', 'TypeScript', 'SCSS Modules',
+            'Radix UI', 'React Router Dom 6', 'React Hook Form','Storybook', 'REST API', 'React Toastify', 'Zod', 'Vite'
+        ],
+    },
+
+    {
         title: 'Task Manager',
         demoUrl: 'https://natkhomich.github.io/task-manager/',
         githubUrl: 'https://github.com/NatKhomich/task-manager',
@@ -194,7 +209,7 @@ The app allows users to log in (including through Google services) and access th
 The site is made according to the layout from Figma. With adaptive.
         `,
         technologies: [
-            'React', 'TypeScript', 'Styled components', 'React-awesome-reveal', 'React-scroll'
+            'React', 'TypeScript', 'Styled Components', 'React Awesome Reveal', 'React Scroll'
         ],
     },
 ]
