@@ -66,34 +66,32 @@ type LinkProps = {
 }
 
 const Link = styled.a<LinkProps>`
-  display: inline-block;
-  width: 115px;
-  height: 43px;
-  color: black;
-  font-size: 20px;
-  font-family: Roboto, sans-serif;
-  font-weight: 500;
-  border-radius: 7px;
-  text-align: center;
+    display: inline-block;
+    padding: 8px 15px;
+    color: black;
+    font-size: 16px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    border-radius: 20px;
+    text-align: center;
 
-  padding: 10px 0;
-  background-color: ${props => props.background || 'white'};
+    background-color: ${props => props.background || 'white'};
 
-  ${props => props.background === 'accent' && css`
-    background-color: ${theme.colors.accent};
-  `}
-  ${props => props.background === 'font' && css`
-    background-color: ${theme.colors.font};
-  `}
-  & + a {
-    margin-left: 12px;
-  }
+    ${props => props.background === 'accent' && css`
+        background-color: ${theme.colors.accent};
+    `}
+    ${props => props.background === 'font' && css`
+        background-color: ${theme.colors.font};
+    `}
+    & + a {
+        margin-left: 12px;
+    }
 
-  &:hover {
-    background-color: rgba(243, 227, 199, 0.7);
-    transform: ${theme.animations.transform};
-    transition: ${theme.animations.transition};
-  }
+    &:hover {
+        background-color: rgba(243, 227, 199, 0.7);
+        transform: ${theme.animations.transform};
+        transition: ${theme.animations.transition};
+    }
 `
 
 const Photo = styled.img`

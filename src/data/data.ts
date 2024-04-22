@@ -29,6 +29,7 @@ import {SlSocialVkontakte} from 'react-icons/sl';
 import { SiRadixui } from "react-icons/si";
 import { SiReacthookform } from "react-icons/si";
 import { GoGear } from "react-icons/go";
+import { FaLinkedin } from "react-icons/fa";
 
 type SkillProps = {
     title: string
@@ -45,7 +46,7 @@ export type ProjectProps = {
     technologies: string[]
 }
 
-type FooterLink = {
+type LinkProps = {
     icon: IconType | string
     title: string
     color: string
@@ -232,7 +233,7 @@ The site is made according to the layout from Figma. With adaptive.
     },
 ]
 
-export const footerLink: FooterLink[] = [
+export const footerLink: LinkProps[] = [
     {
         title: 'Telegram',
         color: theme.colors.font,
@@ -253,5 +254,36 @@ export const footerLink: FooterLink[] = [
         icon: SlSocialVkontakte,
         link: 'https://vk.com/natalia_khomich',
         ariaLabel: 'vkontakte-link'
+    },
+]
+
+export const headerLink: LinkProps[] = [
+    {
+        title: 'Github',
+        color: theme.colors.font,
+        icon: FaGithub,
+        link: 'https://github.com/NatKhomich',
+        ariaLabel: 'github-link'
+    },
+    {
+        title: 'Telegram',
+        color: theme.colors.font,
+        icon: FaTelegram,
+        link: 'https://t.me/Natalia_Khomich',
+        ariaLabel: 'telegram-link'
+    },
+    {
+        title: 'LinkedIn',
+        color: theme.colors.font,
+        icon: FaLinkedin,
+        link: 'https://www.linkedin.com/in/nat-khomich',
+        ariaLabel: 'linkedin-link'
+    },
+    {
+        title: 'Instagram',
+        color: theme.colors.font,
+        icon: FaInstagram,
+        link: 'https://www.instagram.com/nat_khomich/',
+        ariaLabel: 'instagram-link'
     },
 ]

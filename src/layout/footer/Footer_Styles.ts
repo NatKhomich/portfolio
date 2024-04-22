@@ -15,11 +15,19 @@ const Title = styled.h2`
   font-size: 26px;
   font-family: Playfair Display, sans-serif;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   @media ${theme.media.mobile} {
     margin-bottom: 35px;
   }
+`
+
+const Contact = styled.p`
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: ${theme.colors.accent};
 `
 
 const SocialList = styled.ul`
@@ -45,5 +53,6 @@ export const S = {
     Title,
     SocialList,
     Link,
-    Copyright
+    Copyright,
+    Contact
 }

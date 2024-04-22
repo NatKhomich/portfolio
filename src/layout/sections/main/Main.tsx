@@ -4,6 +4,7 @@ import {FlexWrapper} from '../../../components/FlexWrapper';
 import {Container} from '../../../components/Container';
 import {S} from './Main_Styles'
 import ReactTypingEffect from 'react-typing-effect';
+import cv from '../../../assets/cv.pdf'
 
 export const Main = () => {
 
@@ -18,14 +19,9 @@ export const Main = () => {
                             Front-end Developer
                         </S.MainTitle>
 
-                        <S.Link href="https://www.linkedin.com/in/nat-khomich/" target="_blank"
+                        <S.Link href={cv} target="_blank"
                               background="accent">
-                            LinkedIn
-                        </S.Link>
-
-                        <S.Link href="https://github.com/NatKhomich" target="_blank"
-                              background="font">
-                            Github
+                            Show CV
                         </S.Link>
 
                         <S.TextEffect>

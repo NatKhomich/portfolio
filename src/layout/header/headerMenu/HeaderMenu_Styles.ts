@@ -37,11 +37,17 @@ const NavLink = styled(Link)`
 
 //Desktop
 const DesktopMenu = styled.nav`
+    display: flex;
+    justify-content: space-between;
+    
   ul {
     display: flex;
     justify-content: flex-end;
-    gap: 55px
+    gap: 40px
   }
+    ul+ul {
+        gap: 20px
+    }
 `
 
 //Mobile
@@ -100,30 +106,36 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 `
 
 const MenuPopup = styled.nav<{isOpen: boolean}>`
-  position: fixed;
-  background-color: rgba(31, 31, 32, 0.9);
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(-100%);
-  transition: .8s ease-in-out;
-  
-  ${props => props.isOpen && css<{isOpen: boolean}>`
-    transform: translateY(0);
-  `}
-
-  ul {
+    position: fixed;
+    background-color: rgba(31, 31, 32, 0.9);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 45px
-  }
+    transform: translateY(-100%);
+    transition: .8s ease-in-out;
+    flex-direction: column;
+
+    ${props => props.isOpen && css<{ isOpen: boolean }>`
+        transform: translateY(0);
+    `}
+    ul:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 45px;
+        margin-bottom: 20px;
+    }
+
+    ul + ul {
+        display: flex;
+        gap: 15px;
+    }
 `
 
 export const S = {

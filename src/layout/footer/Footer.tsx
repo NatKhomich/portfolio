@@ -13,6 +13,8 @@ export const Footer = () => {
                 <Container>
                     <S.Title>You can find me here:</S.Title>
                     <FlexWrapper direction={'column'} align={'center'}>
+                        <S.Contact>natalia.khomich.by@gmail.com</S.Contact>
+                        <S.Contact>+7-951-331-08-18</S.Contact>
                         <S.SocialList>
                             {footerLink.map((link, index) => (
                                 <li key={index}>
